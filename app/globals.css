@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette "papier chantier" : fond chaud lumineux, bleu workwear, orange sécurité */
+  --color-paper: #f8f7f2;
+  --color-surface: #ffffff;
+  --color-ink: #16233b;
+  --color-muted: #55647c;
+  --color-line: #e7e4da;
+
+  --color-blue: #2453cc;
+  --color-blue-deep: #17357e;
+  --color-blue-soft: #e9effc;
+
+  --color-orange: #ec5f14;
+  --color-orange-deep: #cf4d0a;
+  --color-orange-soft: #fdeee3;
+
+  --color-green: #1c8a57;
+  --color-green-soft: #e6f5ec;
+
+  --color-red: #bb4444;
+  --color-red-soft: #faeceb;
+
+  /* Panneaux décoratifs foncés (carte prix, CTA, confiance) :
+     restent sombres dans les deux thèmes, ne s'inversent pas. */
+  --color-panel: #16233b;
+
+  --font-display: var(--font-bricolage), ui-sans-serif, sans-serif;
+  --font-body: var(--font-instrument), ui-sans-serif, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(22 35 59 / 0.04), 0 8px 24px -8px rgb(22 35 59 / 0.1);
+  --shadow-pop: 0 2px 4px rgb(22 35 59 / 0.06), 0 20px 44px -12px rgb(22 35 59 / 0.18);
+  --shadow-cta: 0 4px 14px -2px rgb(236 95 20 / 0.4);
+}
+
+/* ---- Thème sombre : on ré-affecte la palette sous .dark ---- */
+.dark {
+  --color-paper: #0e1626;
+  --color-surface: #172236;
+  --color-ink: #eef2f9;
+  --color-muted: #9aabc4;
+  --color-line: #29374f;
+
+  --color-blue: #5b8bf5;
+  --color-blue-deep: #cdddff;
+  --color-blue-soft: #1a2740;
+
+  --color-orange: #ff7a3d;
+  --color-orange-deep: #ff8f57;
+  --color-orange-soft: #35251b;
+
+  --color-green: #34b979;
+  --color-green-soft: #123020;
+
+  --color-red: #e37676;
+  --color-red-soft: #35201f;
+
+  /* Les panneaux foncés s'éclaircissent juste assez pour ressortir
+     du fond de page presque noir. */
+  --color-panel: #1b2946;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-orange-soft);
+    color: var(--color-orange-deep);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold
+      transition-all duration-200 select-none bg-orange text-white px-6 py-3.5 text-base
+      hover:bg-orange-deep hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
+    box-shadow: var(--shadow-cta);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold
+      transition-all duration-200 select-none bg-surface text-ink border border-line
+      px-6 py-3.5 text-base
+      hover:border-blue hover:text-blue hover:-translate-y-0.5 active:translate-y-0;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card {
+    @apply rounded-2xl bg-surface border border-line;
+    box-shadow: var(--shadow-card);
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-blue;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-6 bg-blue;
+  }
+
+  .section-title {
+    @apply mt-3 text-3xl sm:text-4xl font-bold text-ink;
+  }
+
+  .section-text {
+    @apply mt-4 text-base sm:text-lg leading-relaxed text-muted;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-blue-soft text-blue-deep
+      px-3.5 py-1.5 text-sm font-semibold;
+  }
+
+  /* Fond quadrillé façon plan d'architecte, très léger */
+  .blueprint {
+    background-image:
+      linear-gradient(rgb(36 83 204 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(36 83 204 / 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+/* ---- Apparition au scroll (IntersectionObserver ajoute .is-visible) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---- Accordéon FAQ (details/summary, accessible clavier) ---- */
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item .faq-chevron {
+  transition: transform 0.25s ease;
+}
+.faq-item[open] .faq-chevron {
+  transform: rotate(45deg);
+}
+.faq-item .faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.faq-item[open] .faq-answer {
+  grid-template-rows: 1fr;
+}
+.faq-item .faq-answer > div {
+  overflow: hidden;
+}
+
+/* ---- Bouton WhatsApp flottant : ombre + halo pulsé ---- */
+.wa-float {
+  box-shadow: 0 4px 16px -2px rgb(37 211 102 / 0.5);
+}
+.wa-float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #25d366;
+  z-index: -1;
+  animation: wa-ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes wa-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  70%,
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa-float::before {
+    animation: none;
+    display: none;
+  }
+}
+
+/* ---- Flottement léger des badges du mockup téléphone ---- */
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+.float-soft {
+  animation: float-soft 5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .float-soft {
+    animation: none;
+  }
+}
