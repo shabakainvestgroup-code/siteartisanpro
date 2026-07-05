@@ -357,13 +357,45 @@ const en = {
       ],
     },
     "terms-and-conditions": {
-      title: "Terms and conditions",
+      title: "Terms and conditions of sale",
       body: [
-        "The “Essential Trades Website” offer includes the creation of an essential professional website using the texts, photos, contact details and information provided by the client.",
-        "The starting price applies when the client provides all the elements required to create the website. Additional services (content writing, photo enhancement, extra pages, SEO, monthly support…) are offered as separately billed options.",
-        "Launch timelines depend on when the client provides the required elements.",
-        "A simple revision may be included depending on the selected offer. Additional modifications can be offered as options.",
-        "[To complete: payment terms, applicable law, jurisdiction.]",
+        "These terms and conditions govern the sale of the website creation services offered under the TradeSite Express brand. Any order implies full and unreserved acceptance of these terms.",
+
+        "## Article 1 — Purpose",
+        "The provider offers the creation of professional websites for tradespeople and small trade businesses. These terms define the rights and obligations of both parties within this service.",
+
+        "## Article 2 — Services",
+        "The “Essential Trades Website” offer includes the creation of an essential professional website from the texts, photos, contact details and information provided by the client: business presentation, services list, visible contact details, call and WhatsApp buttons, service area and a mobile-optimized version.",
+        "Additional services (content writing, photo enhancement, extra pages, gallery, local SEO, Google Business Profile, social media, monthly support…) are agreed and billed separately before they are carried out.",
+
+        "## Article 3 — Materials provided by the client",
+        "The base offer price applies when the client provides all the elements required to create the website: texts, photos, any logo, contact details, services and service areas. The client warrants that they hold the rights to use the content they provide and remains solely responsible for its accuracy and legality.",
+
+        "## Article 4 — Price",
+        "The base offer price is 99, displayed in euros, dollars or pounds sterling depending on the selected currency. This amount corresponds to the service described in Article 2, excluding options. Option prices are communicated to and approved by the client before they are carried out.",
+
+        "## Article 5 — Payment terms",
+        "A 50 € deposit (or the equivalent in the selected currency) is paid by the client when the order is placed. The remaining balance is paid upon go-live and delivery of the website.",
+        "All payments are made by bank transfer, using the bank details provided to the client at the time of the order. Final publication of the website may be subject to full payment of the balance.",
+
+        "## Article 6 — Timeframes",
+        "Production and go-live timeframes depend on how quickly the client provides the required elements and approves each step. Once the elements are received, setup can be fast. Any announced timeframes are given as an indication only.",
+
+        "## Article 7 — Revisions and changes",
+        "A simple revision may be included depending on the selected offer. Additional changes, content additions or specific upgrades requested after delivery may be billed separately as options.",
+
+        "## Article 8 — Go-live and hosting",
+        "Publishing the website requires a domain name and hosting. Unless stated otherwise, these elements and any related costs are specified at the time of the order. The client remains the owner of the content they provided.",
+
+        "## Article 9 — Liability",
+        "The provider undertakes to take due care in creating the website. The provider cannot be held liable for incorrect or unlawful content supplied by the client, temporary unavailability related to hosting, or improper use of the website after its delivery.",
+
+        "## Article 10 — Personal data",
+        "Information provided as part of the order is processed in accordance with the website's privacy policy.",
+
+        "## Article 11 — Governing law and disputes",
+        "These terms are governed by French law. In the event of a dispute, the parties will first seek an amicable solution. Failing an agreement, the competent courts will be those of the provider's registered office.",
+        "Publisher: [Company name to complete] — Rue des Jacobins, 80000 Amiens, France. Contact: via WhatsApp at +33 7 74 49 64 40.",
       ],
     },
   },

@@ -357,13 +357,45 @@ const fr = {
       ],
     },
     "conditions-generales": {
-      title: "Conditions générales",
+      title: "Conditions générales de vente",
       body: [
-        "L'offre « Site Artisan Essentiel » comprend la création d'un site professionnel essentiel à partir des textes, photos, coordonnées et informations fournis par le client.",
-        "Le tarif de départ s'applique lorsque le client fournit l'ensemble des éléments nécessaires à la création du site. Les prestations complémentaires (rédaction, retouche photo, pages supplémentaires, référencement, accompagnement mensuel…) font l'objet d'options facturées séparément.",
-        "Les délais de mise en ligne dépendent de la transmission des éléments par le client.",
-        "Une correction simple peut être prévue selon l'offre choisie. Les modifications supplémentaires peuvent être proposées en option.",
-        "[Compléter : modalités de paiement, droit applicable, juridiction compétente.]",
+        "Les présentes conditions générales de vente régissent la vente des prestations de création de sites internet proposées sous la marque Site Artisan Pro. Toute commande implique l'acceptation pleine et entière des présentes conditions.",
+
+        "## Article 1 — Objet",
+        "Le prestataire propose la création de sites internet professionnels destinés aux artisans et petites entreprises du bâtiment. Les présentes conditions définissent les droits et obligations des parties dans le cadre de cette prestation.",
+
+        "## Article 2 — Prestations",
+        "L'offre « Site Artisan Essentiel » comprend la création d'un site professionnel essentiel à partir des textes, photos, coordonnées et informations fournis par le client : présentation de l'activité, liste des services, coordonnées visibles, bouton d'appel et de contact WhatsApp, zone d'intervention et version optimisée pour smartphone.",
+        "Les prestations complémentaires (rédaction des textes, retouche photo, pages supplémentaires, galerie, référencement local, fiche Google Business Profile, réseaux sociaux, accompagnement mensuel…) font l'objet d'options convenues et facturées séparément avant leur réalisation.",
+
+        "## Article 3 — Éléments fournis par le client",
+        "Le tarif de l'offre de base s'applique lorsque le client fournit l'ensemble des éléments nécessaires à la création du site : textes, photos, logo éventuel, coordonnées, services et zones d'intervention. Le client garantit détenir les droits d'utilisation des contenus qu'il transmet et demeure seul responsable de leur exactitude et de leur légalité.",
+
+        "## Article 4 — Prix",
+        "Le prix de l'offre de base est de 99, affiché en euros, dollars ou livres sterling selon la devise sélectionnée. Ce montant correspond à la prestation décrite à l'article 2, hors options. Le prix des options est communiqué au client et validé par lui avant leur réalisation.",
+
+        "## Article 5 — Modalités de paiement",
+        "Un acompte de 50 € (ou l'équivalent dans la devise choisie) est versé par le client à la commande. Le solde restant dû est réglé à la mise en ligne et à la livraison du site.",
+        "L'ensemble des règlements s'effectue par virement bancaire, aux coordonnées bancaires communiquées au client lors de la commande. La mise en ligne définitive du site peut être conditionnée au règlement intégral du solde.",
+
+        "## Article 6 — Délais",
+        "Les délais de réalisation et de mise en ligne dépendent de la rapidité avec laquelle le client transmet les éléments nécessaires et valide les étapes. Une fois les éléments reçus, la mise en place peut être rapide. Les délais éventuellement annoncés sont donnés à titre indicatif.",
+
+        "## Article 7 — Révisions et modifications",
+        "Une correction simple peut être prévue selon l'offre choisie. Les modifications supplémentaires, ajouts de contenu ou évolutions spécifiques demandés après la livraison peuvent faire l'objet d'options facturées séparément.",
+
+        "## Article 8 — Mise en ligne et hébergement",
+        "La mise en ligne du site nécessite un nom de domaine et un hébergement. Sauf mention contraire, ces éléments et leurs coûts éventuels sont précisés lors de la commande. Le client demeure propriétaire des contenus qu'il a fournis.",
+
+        "## Article 9 — Responsabilités",
+        "Le prestataire s'engage à apporter le soin nécessaire à la réalisation du site. Sa responsabilité ne saurait être engagée en cas de contenu erroné ou illicite fourni par le client, d'indisponibilité temporaire liée à l'hébergement, ou d'une utilisation inadaptée du site après sa livraison.",
+
+        "## Article 10 — Données personnelles",
+        "Les informations transmises dans le cadre de la commande sont traitées conformément à la politique de confidentialité du site.",
+
+        "## Article 11 — Droit applicable et litiges",
+        "Les présentes conditions sont soumises au droit français. En cas de litige, les parties rechercheront en priorité une solution amiable. À défaut d'accord, les tribunaux compétents seront ceux du ressort du siège du prestataire.",
+        "Éditeur : [Raison sociale à compléter] — Rue des Jacobins, 80000 Amiens, France. Contact : via WhatsApp au +33 7 74 49 64 40.",
       ],
     },
   },

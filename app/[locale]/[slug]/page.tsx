@@ -51,11 +51,20 @@ export default async function LegalPage({
         {page.title}
       </h1>
       <div className="mt-8 space-y-4">
-        {page.body.map((paragraph, i) => (
-          <p key={i} className="text-[15px] leading-relaxed text-muted">
-            {paragraph}
-          </p>
-        ))}
+        {page.body.map((line, i) =>
+          line.startsWith("## ") ? (
+            <h2
+              key={i}
+              className="pt-4 font-display text-lg font-bold text-ink"
+            >
+              {line.slice(3)}
+            </h2>
+          ) : (
+            <p key={i} className="text-[15px] leading-relaxed text-muted">
+              {line}
+            </p>
+          )
+        )}
       </div>
     </article>
   );
