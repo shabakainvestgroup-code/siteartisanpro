@@ -47,15 +47,15 @@ npm start          # serveur de production
 
 ## Formulaire de contact
 
-Les demandes sont envoyées à `POST /api/contact`, journalisées côté serveur,
-puis transmises en JSON au webhook défini dans `CONTACT_WEBHOOK_URL`
-(n8n, Make, Zapier, CRM…). Voir `.env.example`.
+Le formulaire ne fait aucun appel serveur : au clic sur « Envoyer sur
+WhatsApp », les champs remplis sont assemblés en un message et le visiteur est
+redirigé vers WhatsApp (`wa.me`) avec ce message pré-rempli. Le numéro provient
+de la clé `footer.whatsapp` des dictionnaires. Rien à héberger ni à connecter.
 
 ## Variables d'environnement
 
 ```
-NEXT_PUBLIC_SITE_URL   # URL publique (SEO, Open Graph, hreflang)
-CONTACT_WEBHOOK_URL    # optionnel : webhook recevant chaque lead
+NEXT_PUBLIC_SITE_URL   # URL publique (SEO, Open Graph, hreflang, sitemap)
 ```
 
 ## Déploiement (Vercel)
@@ -65,9 +65,9 @@ CONTACT_WEBHOOK_URL    # optionnel : webhook recevant chaque lead
 2. Dans **Settings → Environment Variables**, définir `NEXT_PUBLIC_SITE_URL`
    (l'URL finale du site) puis redéployer, pour que Open Graph, `hreflang`,
    `robots.txt` et `sitemap.xml` pointent vers le bon domaine.
-3. Brancher `CONTACT_WEBHOOK_URL` **avant la mise en ligne commerciale** : sans
-   webhook, les demandes du formulaire ne sont écrites que dans les logs
-   éphémères des fonctions Vercel et ne parviennent donc à personne.
+
+Le formulaire de contact redirige directement vers WhatsApp — aucune
+configuration serveur n'est nécessaire pour recevoir les demandes.
 
 `robots.txt` et `sitemap.xml` sont générés automatiquement (`app/robots.ts`,
 `app/sitemap.ts`).

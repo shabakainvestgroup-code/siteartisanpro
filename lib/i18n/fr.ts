@@ -271,7 +271,8 @@ const fr = {
   contact: {
     eyebrow: "Contact",
     title: "Commander mon site",
-    text: "Remplissez le formulaire et nous vous recontacterons pour préparer votre site professionnel.",
+    text: "Remplissez le formulaire : votre demande s'ouvre pré-remplie sur WhatsApp, il ne reste plus qu'à l'envoyer.",
+    msgIntro: "Bonjour, je souhaite commander un site professionnel pour mon activité.",
     fields: {
       name: "Nom",
       company: "Entreprise",
@@ -303,13 +304,11 @@ const fr = {
       "Rédaction des textes",
       "Autre demande",
     ],
-    submit: "Envoyer ma demande",
-    submitting: "Envoi en cours…",
+    submit: "Envoyer sur WhatsApp",
     success:
-      "Merci. Votre demande a bien été envoyée. Nous vous recontacterons rapidement.",
-    successTitle: "Demande envoyée",
-    error:
-      "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement par email.",
+      "Votre demande s'est ouverte sur WhatsApp. Finalisez l'envoi du message pour nous joindre.",
+    successTitle: "Direction WhatsApp",
+    successAgain: "Renvoyer sur WhatsApp",
     requiredHint: "Champs obligatoires",
   },
 

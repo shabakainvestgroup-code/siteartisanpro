@@ -271,7 +271,8 @@ const en = {
   contact: {
     eyebrow: "Contact",
     title: "Order my website",
-    text: "Fill in the form and we will contact you to prepare your professional website.",
+    text: "Fill in the form: your request opens pre-filled on WhatsApp, all you have to do is send it.",
+    msgIntro: "Hello, I would like to order a professional website for my business.",
     fields: {
       name: "Name",
       company: "Company",
@@ -303,12 +304,11 @@ const en = {
       "Content writing",
       "Other request",
     ],
-    submit: "Send my request",
-    submitting: "Sending…",
-    success: "Thank you. Your request has been sent. We will contact you shortly.",
-    successTitle: "Request sent",
-    error:
-      "Something went wrong while sending your request. Please try again or email us directly.",
+    submit: "Send on WhatsApp",
+    success:
+      "Your request has opened on WhatsApp. Send the message to reach us.",
+    successTitle: "Off to WhatsApp",
+    successAgain: "Send on WhatsApp again",
     requiredHint: "Required fields",
   },
 
