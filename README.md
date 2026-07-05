@@ -58,6 +58,20 @@ NEXT_PUBLIC_SITE_URL   # URL publique (SEO, Open Graph, hreflang)
 CONTACT_WEBHOOK_URL    # optionnel : webhook recevant chaque lead
 ```
 
+## Déploiement (Vercel)
+
+1. Importer le dépôt GitHub dans Vercel — le framework Next.js est détecté
+   automatiquement (build `next build`, aucune configuration requise).
+2. Dans **Settings → Environment Variables**, définir `NEXT_PUBLIC_SITE_URL`
+   (l'URL finale du site) puis redéployer, pour que Open Graph, `hreflang`,
+   `robots.txt` et `sitemap.xml` pointent vers le bon domaine.
+3. Brancher `CONTACT_WEBHOOK_URL` **avant la mise en ligne commerciale** : sans
+   webhook, les demandes du formulaire ne sont écrites que dans les logs
+   éphémères des fonctions Vercel et ne parviennent donc à personne.
+
+`robots.txt` et `sitemap.xml` sont générés automatiquement (`app/robots.ts`,
+`app/sitemap.ts`).
+
 ## Évolutions prévues par la structure
 
 Paiement en ligne, espace admin, CRM, blog, pages métiers / pays / services :
