@@ -1,9 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import type { Dict } from "@/lib/i18n";
 import { Icon } from "./icons";
 
-// Visuel du hero : vraie photo d'artisan + badges de preuve sociale
-// + carte de contact façon mini-site, pour humaniser la promesse.
+// Visuel du hero : vraie photo d'artisan avec parallaxe au scroll,
+// badges de preuve sociale et carte de contact façon mini-site.
 export default function HeroVisual({
   mock,
   alt,
@@ -11,8 +20,18 @@ export default function HeroVisual({
   mock: Dict["hero"]["mock"];
   alt: string;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  // Démarre à 0 au repos (scroll = 0) pour coïncider avec le rendu serveur
+  // et éviter tout mismatch d'hydratation ; l'image dérive au scroll.
+  const y = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [0, 60]);
+
   return (
-    <div className="relative mx-auto w-full max-w-[420px]">
+    <div ref={ref} className="relative mx-auto w-full max-w-[420px]">
       {/* Halo décoratif */}
       <div
         aria-hidden="true"
@@ -23,17 +42,20 @@ export default function HeroVisual({
         }}
       />
 
-      {/* Photo principale */}
-      <div className="overflow-hidden rounded-3xl shadow-[var(--shadow-pop)]">
-        <Image
-          src="/images/hero-artisan.jpg"
-          alt={alt}
-          width={1400}
-          height={2100}
-          priority
-          sizes="(min-width: 1024px) 420px, 90vw"
-          className="aspect-[4/5] w-full object-cover"
-        />
+      {/* Photo principale (parallaxe au scroll) */}
+      <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[var(--shadow-pop)]">
+        <motion.div style={{ y }} className="absolute inset-0">
+          <div className="absolute inset-0 scale-[1.12]">
+            <Image
+              src="/images/hero-artisan.jpg"
+              alt={alt}
+              fill
+              priority
+              sizes="(min-width: 1024px) 420px, 90vw"
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
       </div>
 
       {/* Badge flottant : note */}

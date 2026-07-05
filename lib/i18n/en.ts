@@ -76,6 +76,15 @@ const en = {
     ],
   },
 
+  stats: {
+    items: [
+      { value: 11, suffix: "", label: "trades covered" },
+      { value: 10, suffix: "", label: "options to grow your website" },
+      { value: 5, suffix: "", label: "simple steps to go live" },
+      { value: 100, suffix: " %", label: "mobile-optimized" },
+    ],
+  },
+
   offer: {
     eyebrow: "The offer",
     title: "A professional online presence, simple and effective",

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getDict, isLocale } from "@/lib/i18n";
 import Hero from "@/components/Hero";
 import TradesSection from "@/components/TradesSection";
+import StatsBand from "@/components/StatsBand";
 import OfferSection from "@/components/OfferSection";
 import OptionsSection from "@/components/OptionsSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -40,6 +41,7 @@ export default async function LandingPage({
       />
       <Hero d={d} locale={locale} />
       <TradesSection d={d} />
+      <StatsBand d={d} />
       <OfferSection d={d} locale={locale} />
       <OptionsSection d={d} />
       <ProcessSection d={d} />

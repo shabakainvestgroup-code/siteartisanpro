@@ -76,6 +76,15 @@ const fr = {
     ],
   },
 
+  stats: {
+    items: [
+      { value: 11, suffix: "", label: "métiers du bâtiment couverts" },
+      { value: 10, suffix: "", label: "options pour faire évoluer votre site" },
+      { value: 5, suffix: "", label: "étapes simples pour être en ligne" },
+      { value: 100, suffix: " %", label: "optimisé pour smartphone" },
+    ],
+  },
+
   offer: {
     eyebrow: "L'offre",
     title: "Une présence en ligne professionnelle, simple et efficace",

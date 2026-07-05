@@ -7,6 +7,7 @@ import { CurrencyProvider } from "@/lib/currency-context";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ScrollProgress from "@/components/ScrollProgress";
 import "../globals.css";
 
 const display = Bricolage_Grotesque({
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
       <body>
         <CurrencyProvider>
           <MotionConfig reducedMotion="user">
+            <ScrollProgress />
             <Header d={d} locale={locale} />
             <main>{children}</main>
             <Footer d={d} locale={locale} />
