@@ -1,8 +1,19 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { motion, type Variants } from "motion/react";
+import type { ReactNode } from "react";
 
-// Apparition douce au scroll — respecte prefers-reduced-motion (géré en CSS).
+// Apparition au scroll via Framer Motion.
+// API inchangée (children, delay en ms, className) — toutes les sections
+// existantes en bénéficient automatiquement.
+// Le respect de prefers-reduced-motion est géré globalement par
+// <MotionConfig reducedMotion="user"> dans le layout.
+
+const variants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export default function Reveal({
   children,
   delay = 0,
@@ -12,31 +23,20 @@ export default function Reveal({
   delay?: number;
   className?: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]?.isIntersecting) {
-          el.classList.add("is-visible");
-          io.disconnect();
-        }
-      },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
   return (
-    <div
-      ref={ref}
-      className={`reveal ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+    <motion.div
+      className={className}
+      variants={variants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+      transition={{
+        duration: 0.6,
+        delay: delay / 1000,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

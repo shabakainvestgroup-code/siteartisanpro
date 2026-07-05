@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getDict, isLocale, locales, type Locale } from "@/lib/i18n";
+import { MotionConfig } from "motion/react";
 import { CurrencyProvider } from "@/lib/currency-context";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -86,10 +87,12 @@ export default async function LocaleLayout({
       </head>
       <body>
         <CurrencyProvider>
-          <Header d={d} locale={locale} />
-          <main>{children}</main>
-          <Footer d={d} locale={locale} />
-          <WhatsAppFloat d={d} />
+          <MotionConfig reducedMotion="user">
+            <Header d={d} locale={locale} />
+            <main>{children}</main>
+            <Footer d={d} locale={locale} />
+            <WhatsAppFloat d={d} />
+          </MotionConfig>
         </CurrencyProvider>
       </body>
     </html>

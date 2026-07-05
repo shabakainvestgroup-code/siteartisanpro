@@ -2,6 +2,7 @@ import type { Dict } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/config";
 import Price from "./Price";
 import HeroVisual from "./HeroVisual";
+import AnimatedUnderline from "./AnimatedUnderline";
 import Reveal from "./Reveal";
 
 export default function Hero({ d, locale }: { d: Dict; locale: Locale }) {
@@ -23,20 +24,7 @@ export default function Hero({ d, locale }: { d: Dict; locale: Locale }) {
               {d.hero.titleBefore}{" "}
               <span className="relative inline-block whitespace-nowrap text-blue">
                 <Price />
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 120 10"
-                  className="absolute -bottom-1.5 left-0 w-full text-orange"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M2 7.5C30 3 70 2.5 118 6"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    fill="none"
-                  />
-                </svg>
+                <AnimatedUnderline className="absolute -bottom-1.5 left-0 w-full text-orange" />
               </span>
             </h1>
           </Reveal>
