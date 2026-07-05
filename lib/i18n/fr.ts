@@ -339,11 +339,10 @@ const fr = {
     "mentions-legales": {
       title: "Mentions légales",
       body: [
-        "Éditeur du site : [Raison sociale à compléter] — Rue des Jacobins, 80000 Amiens, France.",
-        "Responsable de la publication : [Nom du responsable].",
+        "Éditeur du site : Site Artisan Pro — Rue des Jacobins, 80000 Amiens, France.",
+        "Responsable de la publication : Site Artisan Pro.",
         "Contact : uniquement via WhatsApp au +33 7 74 49 64 40.",
-        "Hébergement : [Nom et adresse de l'hébergeur].",
-        "Numéro d'immatriculation : [SIRET / registre du commerce].",
+        "Hébergement : Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis (vercel.com).",
         "Le contenu de ce site (textes, visuels, marque) est protégé. Toute reproduction sans autorisation est interdite.",
       ],
     },
@@ -395,7 +394,7 @@ const fr = {
 
         "## Article 11 — Droit applicable et litiges",
         "Les présentes conditions sont soumises au droit français. En cas de litige, les parties rechercheront en priorité une solution amiable. À défaut d'accord, les tribunaux compétents seront ceux du ressort du siège du prestataire.",
-        "Éditeur : [Raison sociale à compléter] — Rue des Jacobins, 80000 Amiens, France. Contact : via WhatsApp au +33 7 74 49 64 40.",
+        "Éditeur : Site Artisan Pro — Rue des Jacobins, 80000 Amiens, France. Contact : via WhatsApp au +33 7 74 49 64 40.",
       ],
     },
   },

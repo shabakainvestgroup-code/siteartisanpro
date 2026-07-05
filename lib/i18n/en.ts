@@ -339,11 +339,10 @@ const en = {
     "legal-notice": {
       title: "Legal notice",
       body: [
-        "Website publisher: [Company name to complete] — Rue des Jacobins, 80000 Amiens, France.",
-        "Publication manager: [Name].",
+        "Website publisher: TradeSite Express — Rue des Jacobins, 80000 Amiens, France.",
+        "Publication manager: TradeSite Express.",
         "Contact: via WhatsApp only, +33 7 74 49 64 40.",
-        "Hosting provider: [Host name and address].",
-        "Registration number: [Company registration number].",
+        "Hosting provider: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA (vercel.com).",
         "The content of this website (texts, visuals, brand) is protected. Any reproduction without authorization is prohibited.",
       ],
     },
@@ -395,7 +394,7 @@ const en = {
 
         "## Article 11 — Governing law and disputes",
         "These terms are governed by French law. In the event of a dispute, the parties will first seek an amicable solution. Failing an agreement, the competent courts will be those of the provider's registered office.",
-        "Publisher: [Company name to complete] — Rue des Jacobins, 80000 Amiens, France. Contact: via WhatsApp at +33 7 74 49 64 40.",
+        "Publisher: TradeSite Express — Rue des Jacobins, 80000 Amiens, France. Contact: via WhatsApp at +33 7 74 49 64 40.",
       ],
     },
   },
