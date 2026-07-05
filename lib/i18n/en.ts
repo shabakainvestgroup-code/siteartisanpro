@@ -323,7 +323,7 @@ const en = {
     contactTitle: "Contact",
     whatsappLabel: "WhatsApp only",
     whatsappCta: "Chat on WhatsApp",
-    whatsapp: "+33 7 43 04 27 57",
+    whatsapp: "+33 7 74 49 64 40",
     address: "Rue des Jacobins, 80000 Amiens, France",
     linksTitle: "Information",
     links: [
@@ -341,7 +341,7 @@ const en = {
       body: [
         "Website publisher: [Company name to complete] — Rue des Jacobins, 80000 Amiens, France.",
         "Publication manager: [Name].",
-        "Contact: via WhatsApp only, +33 7 43 04 27 57.",
+        "Contact: via WhatsApp only, +33 7 74 49 64 40.",
         "Hosting provider: [Host name and address].",
         "Registration number: [Company registration number].",
         "The content of this website (texts, visuals, brand) is protected. Any reproduction without authorization is prohibited.",
@@ -352,7 +352,7 @@ const en = {
       body: [
         "The information submitted through the contact form (name, company, contact details, message) is used only to answer your request and prepare your website project.",
         "It is never sold or shared with third parties, except for the technical providers required to process your request.",
-        "In accordance with the GDPR, you have the right to access, rectify and delete your data. To exercise these rights, contact us via WhatsApp at +33 7 43 04 27 57.",
+        "In accordance with the GDPR, you have the right to access, rectify and delete your data. To exercise these rights, contact us via WhatsApp at +33 7 74 49 64 40.",
         "Retention: requests are kept for the time needed for commercial follow-up, then deleted.",
       ],
     },

@@ -35,7 +35,7 @@ npm start          # serveur de production
 
 - **Textes FR** : `lib/i18n/fr.ts` — **Textes EN** : `lib/i18n/en.ts`
 - **Prix / devises** : `lib/currency.ts` (`BASE_PRICE`, symboles)
-- **Contact** : uniquement via WhatsApp (+33 7 43 04 27 57) — clé
+- **Contact** : uniquement via WhatsApp (+33 7 74 49 64 40) — clé
   `footer.whatsapp` ; adresse : `footer.address` (Rue des Jacobins, 80000 Amiens)
 - **Logos** : `public/logo-fr.png` (Site Artisan Pro) et `public/logo-en.png`
   (TradeSite Express) ; favicon généré dans `app/icon.png`
